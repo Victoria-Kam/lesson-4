@@ -1,4 +1,3 @@
-package com.company;
 
 // Игра угадай число
 
