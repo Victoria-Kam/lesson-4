@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Task1 {
 
     public void first() {
-        int[] array = {10, 12, 17, 18, 28, 38, 40, 46, 17, 62, 165};
+        int[] array = {10, 12, 17, 18, 28, 38, 40, 46, 17, 62, 165,1597};
 
         int count = 0;
         int size = 0;
@@ -46,13 +46,19 @@ public class Task1 {
         //for(int i = 0; i < array.length; i++)
         for (int i = 0, j = 0; j < array.length; i++, j++) {          // заполняем новый массив
             //for()
-            if (array[j] == value) {              //если в старом значении есть введенное число
+            if (array[j] == value) {            //если в старом значении есть введенное число
+                if (j == array.length-1) {      // Проверка индекса, последний ли он в массиве
+                    break;
+                }
                 array2[i] = array[++j];         // то в новом массиве записываем следующий элемент старого массива
             }
-            array2[i] = array[j];           // иначе присваиваем значения из старого массива в новый
-
+            array2[i] = array[j];               // иначе присваиваем значения из старого массива в новый
         }
+
+
+
         System.out.println(Arrays.toString(array));
         System.out.println(Arrays.toString(array2));
     }
 }
+
